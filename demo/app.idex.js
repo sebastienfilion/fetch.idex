@@ -5,7 +5,9 @@
 
     idex.test = function() {
 
-        idex.customize(document.querySelector('form'));
+        idex.fetch('template.html', {
+            hook: 'prepend'
+        });
 
     };
 
