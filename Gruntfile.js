@@ -3,11 +3,8 @@ module.exports = function(grunt) {
     var copyrights, banner, footer;
 
     copyrights = '/*!\n' +
-        '* IDeX Custom form element v<%= pkg.version %>\n' +
+        '* IDeX Fetch: Simple template fetcher v<%= pkg.version %>\n' +
         '* http://idesignexperiences.com/#custom-form-element\n' +
-        '*\n' +
-        '* Includes parts of jQuery\n' +
-        '* (http://jquery.com/), released under the MIT Licence (https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt)\n' +
         '*\n' +
         '* Copyright 2013, 2014 Sébastien Filion me@idesignexperiences.com\n' +
         '* Released under the MIT license\n' +
@@ -18,7 +15,10 @@ module.exports = function(grunt) {
         '\n';
 
     banner = copyrights +
-        '(function(idex, window, document, undefined) {\n';
+        '(function(idex, window, document, undefined) {\n' +
+        'idex.render = function(s, o) {\n' +
+        '    return window.Mustache.render(s, o); // You can modify the parsing dependency here\n' +
+        '};\n\n';
 
     footer = '}(window.idex = window.idex || {}, window, document));';
 
