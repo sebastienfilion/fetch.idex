@@ -65,9 +65,7 @@ Can also be set to false so the element is not appended to anything, useful for 
 
 ##### hook ```[string]```
 
-A simple flag to tell if you want the element to ```append``` or ```prepend``` to the parent.
-
-*Used for button and submit type inputs*
+A simple flag to tell if you want the element to ```before``` or ```after``` to the parent.
 
 #### Template ```[string]```
 

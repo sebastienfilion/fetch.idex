@@ -6,7 +6,7 @@
     idex.test = function() {
 
         idex.fetch('template.html', {
-            hook: 'prepend'
+            hook: 'before'
         });
 
     };
